@@ -1,8 +1,6 @@
 import logging
-from custom_components.datadis_integration.const import ATTR_DISTRIBUTOR
 from datetime import timedelta
 from typing import Any, Callable, Dict, Final, Optional
-from typing_extensions import Required
 import datadis.concurrent as datadis
 from homeassistant import core
 from homeassistant.components.sensor import PLATFORM_SCHEMA
@@ -11,7 +9,6 @@ from homeassistant.const import (
     CONF_PASSWORD,
     CONF_USERNAME,
     DEVICE_CLASS_ENERGY,
-    ENERGY_KILO_WATT_HOUR,
 )
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
