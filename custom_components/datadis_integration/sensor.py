@@ -68,6 +68,7 @@ class DatadisSensor(Entity):
         else:
             self._name = self.cups[:5]
         self._available = True
+        self._state = None
 
     @property
     def name(self) -> str:
@@ -89,6 +90,10 @@ class DatadisSensor(Entity):
         return self.attrs
 
     @property
+    def state(self) -> Optional[str]:
+        return self._state
+
+    @property
     def device_class(self) -> str:
         return DEVICE_CLASS_ENERGY
 
@@ -105,6 +110,14 @@ class DatadisSensor(Entity):
                 if supply["cups"] == self.cups:
                     self.attrs = supply
                     self._available = True
+                    max = await datadis.get_max_power(
+                        token,
+                        self.cups,
+                        supply["distributorCode"],
+                        "2021/01",
+                        "2021/12",
+                    )
+                    self._state = f"{max} kWh"
         except:
             self._available = False
             _LOGGER.exception("Error retrieving data from Datadis.")
