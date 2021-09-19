@@ -22,7 +22,7 @@ import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 
-SCAN_INTERVAL = timedelta(days=10)
+SCAN_INTERVAL = timedelta(days=1)
 
 CONF_CUPS: Final = "cups"
 CONF_SUPPLIES: Final = "supplies"
