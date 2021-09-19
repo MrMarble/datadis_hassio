@@ -2,7 +2,7 @@
   "codeowners": [
     "@mrmarble"
   ],
-  "config_flow": false,
+  "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/mrmarble/datadis_hassio",
   "domain": "datadis_integration",

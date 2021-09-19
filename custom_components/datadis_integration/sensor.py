@@ -1,8 +1,9 @@
-import logging
 from datetime import timedelta
+import logging
 from typing import Any, Callable, Dict, Final, Optional
+
 import datadis.concurrent as datadis
-from homeassistant import core
+from homeassistant import config_entries, core
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
     CONF_NAME,
@@ -10,15 +11,17 @@ from homeassistant.const import (
     CONF_USERNAME,
     DEVICE_CLASS_ENERGY,
 )
+from homeassistant.helpers.aiohttp_client import async_get_clientsession
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
-from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.typing import (
     ConfigType,
     DiscoveryInfoType,
     HomeAssistantType,
 )
 import voluptuous as vol
+
+from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -38,6 +41,20 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
         vol.Required(CONF_SUPPLIES): vol.All(cv.ensure_list, [SUP_SCHEMA]),
     }
 )
+
+
+async def async_setup_entry(
+    hass: core.HomeAssistant,
+    config_entry: config_entries.ConfigEntry,
+    async_add_entities,
+):
+    """Setup sensors from a config entry created in the integrations UI."""
+    config = hass.data[DOMAIN][config_entry.entry_id]
+    sensors = [
+        DatadisSensor(config[CONF_USERNAME], config[CONF_PASSWORD], supply)
+        for supply in config[CONF_SUPPLIES]
+    ]
+    async_add_entities(sensors, update_before_add=True)
 
 
 async def async_setup_platform(
