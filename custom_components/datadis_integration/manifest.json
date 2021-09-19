@@ -3,13 +3,13 @@
     "@mrmarble"
   ],
   "config_flow": false,
-  "dependencies": [
-    "datadis"
-  ],
+  "dependencies": [],
   "documentation": "https://github.com/mrmarble/datadis_hassio",
   "domain": "datadis_integration",
   "iot_class": "cloud_polling",
   "name": "Datadis",
-  "requirements": [],
+  "requirements": [
+    "datadis"
+  ],
   "version": "1.0.0"
 }
