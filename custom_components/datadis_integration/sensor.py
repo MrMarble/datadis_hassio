@@ -60,7 +60,7 @@ class DatadisSensor(Entity):
     def __init__(self, username: str, password: str, supply: Dict[str, str]):
         super().__init__()
         self.username = username
-        self.password = username
+        self.password = password
         self.attrs = {}
         self.cups = supply["cups"]
         if CONF_NAME in supply:
