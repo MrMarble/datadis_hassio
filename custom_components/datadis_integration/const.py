@@ -1,1 +1,1 @@
-DOMAIN = "datadis"
+DOMAIN = "datadis_integration"

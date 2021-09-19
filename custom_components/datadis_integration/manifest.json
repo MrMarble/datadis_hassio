@@ -6,10 +6,10 @@
   "dependencies": [
     "datadis"
   ],
-  "documentation": "https://github.com/mrmarble/datadis-hassio",
-  "domain": "datadis",
+  "documentation": "https://github.com/mrmarble/datadis_hassio",
+  "domain": "datadis_integration",
   "iot_class": "cloud_polling",
-  "name": "Datis",
+  "name": "Datadis",
   "requirements": [],
   "version": "1.0.0"
 }
