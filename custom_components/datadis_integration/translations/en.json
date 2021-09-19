@@ -1,0 +1,18 @@
+{
+    "config": {
+        "error": {
+            "auth": "The auth token provided is not valid."
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "username": "Datadis Username",
+                    "password": "Datadis password",
+                    "cups": "Supply CUPS"
+                },
+                "description": "Enter your Datadis credentials.",
+                "title": "Authentication"
+            }
+        }
+    }
+}
