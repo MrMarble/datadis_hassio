@@ -1,0 +1,11 @@
+{
+  "codeowners": ["@mrmarble"],
+  "config_flow": false,
+  "dependencies": [],
+  "documentation": "https://github.com/mrmarble/datadis-hassio",
+  "domain": "datadis",
+  "iot_class": "cloud_polling",
+  "name": "Datis",
+  "requirements": [],
+  "version": "1.0.0"
+}
