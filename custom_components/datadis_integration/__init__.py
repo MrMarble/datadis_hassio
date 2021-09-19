@@ -1,0 +1,1 @@
+"""Datadis Custom Component."""

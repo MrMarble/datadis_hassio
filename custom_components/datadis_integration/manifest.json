@@ -1,7 +1,11 @@
 {
-  "codeowners": ["@mrmarble"],
+  "codeowners": [
+    "@mrmarble"
+  ],
   "config_flow": false,
-  "dependencies": [],
+  "dependencies": [
+    "datadis"
+  ],
   "documentation": "https://github.com/mrmarble/datadis-hassio",
   "domain": "datadis",
   "iot_class": "cloud_polling",
