@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2021-09-20)
+### Fix
+* **configflow:** Steps should match config schema ([`2385843`](https://github.com/MrMarble/datadis_hassio/commit/23858430b385ac36beec6553e31bc88ecc624757))
+
 ## v0.2.0 (2021-09-20)
 ### Feature
 * Add strings.json ([`378c8bf`](https://github.com/MrMarble/datadis_hassio/commit/378c8bf95eed2f6c8e5409366a72765d06ee6067))
