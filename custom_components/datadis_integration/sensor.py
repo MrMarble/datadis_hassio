@@ -1,6 +1,7 @@
 from datetime import timedelta
+import json
 import logging
-from typing import Any, Callable, Dict, Final, Optional
+from typing import Any, Callable, Dict, Final, Mapping, Optional
 
 import datadis.concurrent as datadis
 from homeassistant import config_entries, core
@@ -103,7 +104,7 @@ class DatadisSensor(Entity):
         return self._available
 
     @property
-    def device_state_attributes(self) -> Dict[str, Any]:
+    def extra_state_attributes(self) -> Mapping[str, Any]:
         return self.attrs
 
     @property
@@ -120,9 +121,11 @@ class DatadisSensor(Entity):
 
     async def async_update(self):
         try:
+            _LOGGER.info("Updating Datadis")
             token = await datadis.get_token(self.username, self.password)
+            _LOGGER.info(f"Received token {token}")
             supplies = await datadis.get_supplies(token)
-
+            _LOGGER.info("Received supplies %s", json.dumps(supplies, indent=2))
             for supply in supplies:
                 if supply["cups"] == self.cups:
                     self.attrs = supply
@@ -135,6 +138,9 @@ class DatadisSensor(Entity):
                         "2021/12",
                     )
                     self._state = f"{max} kWh"
+        except ConnectionError as err:
+            self._available = False
+            _LOGGER.exception("Error retrieving data from Datadis.", exc_info=err)
         except:
             self._available = False
             _LOGGER.exception("Error retrieving data from Datadis.")
