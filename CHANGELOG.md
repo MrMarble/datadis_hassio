@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2021-09-20)
+### Feature
+* Add strings.json ([`378c8bf`](https://github.com/MrMarble/datadis_hassio/commit/378c8bf95eed2f6c8e5409366a72765d06ee6067))
+
+### Documentation
+* **readme:** Add wip ([`40896c2`](https://github.com/MrMarble/datadis_hassio/commit/40896c2a94813727938c4b37fc636c6e2a821547))
+
 ## v0.1.0 (2021-09-19)
 ### Feature
 * Add english translation ([`848b97c`](https://github.com/MrMarble/datadis_hassio/commit/848b97c157de40b325300e4b8dee7ea7829682f8))
