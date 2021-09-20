@@ -7,10 +7,17 @@
             "user": {
                 "data": {
                     "username": "Datadis Username",
-                    "password": "Datadis password",
-                    "cups": "Supply CUPS"
+                    "password": "Datadis password"
                 },
                 "description": "Enter your Datadis credentials.",
+                "title": "Authentication"
+            },
+            "cups": {
+                "data": {
+                    "cups": "Supply CUPS",
+                    "name": "Name of installation. Optional."
+                },
+                "description": "Enter your distributor cups",
                 "title": "Authentication"
             }
         }
