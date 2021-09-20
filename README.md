@@ -1,3 +1,3 @@
 # Datis for Home Assistant
 
-## Installation
+# Work in progress. Do NOT install
