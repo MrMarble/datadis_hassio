@@ -2,9 +2,8 @@ name: Verify
 
 on:
   push:
-    branches-ignore:
+    branches:
       - master
-      - next
 
 jobs:
   test:
