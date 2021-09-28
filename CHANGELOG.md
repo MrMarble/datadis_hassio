@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.2 (2021-09-28)
+### Fix
+* Bump dependency version ([`bd3e85b`](https://github.com/MrMarble/datadis_hassio/commit/bd3e85bc21d4465a2604440f9697e43b1d01f370))
+
 ## v0.2.1 (2021-09-20)
 ### Fix
 * **configflow:** Steps should match config schema ([`2385843`](https://github.com/MrMarble/datadis_hassio/commit/23858430b385ac36beec6553e31bc88ecc624757))
