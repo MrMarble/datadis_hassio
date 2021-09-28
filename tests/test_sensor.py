@@ -9,7 +9,7 @@ from custom_components.datadis_integration.sensor import DatadisSensor
 @mock.patch(
     "datadis.get_supplies", return_value=[{"cups": "cups", "distributorCode": 0}]
 )
-@mock.patch("datadis.get_max_power", return_value=1337)
+@mock.patch("datadis.get_max_power", return_value=[1337])
 async def test_async_update_passed(*args):
     """Test a passed async_update."""
     sensor = DatadisSensor("username", "password", {"cups": "cups"})

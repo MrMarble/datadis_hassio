@@ -137,10 +137,11 @@ class DatadisSensor(Entity):
                         "2021/01",
                         "2021/12",
                     )
-                    self._state = f"{max} kWh"
+                    self._state = f"{max[0]} kWh"
+                    _LOGGER.info("Received max power %s", max[0])
         except ConnectionError as err:
             self._available = False
             _LOGGER.exception("Error retrieving data from Datadis.", exc_info=err)
-        except:
+        except Exception as err:
             self._available = False
-            _LOGGER.exception("Error retrieving data from Datadis.")
+            _LOGGER.exception("Error retrieving data from Datadis.", exc_info=err)
