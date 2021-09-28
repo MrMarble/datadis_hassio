@@ -9,7 +9,7 @@
   "iot_class": "cloud_polling",
   "name": "Datadis",
   "requirements": [
-    "datadis"
+    "datadis==0.7.2"
   ],
   "version": "1.0.0"
 }
