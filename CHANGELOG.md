@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.3 (2021-09-28)
+### Fix
+* **datadis:** Wrong import path ([`8e08279`](https://github.com/MrMarble/datadis_hassio/commit/8e08279cfa160696183e024aad47e0c3a97d28ce))
+
 ## v0.2.2 (2021-09-28)
 ### Fix
 * Bump dependency version ([`bd3e85b`](https://github.com/MrMarble/datadis_hassio/commit/bd3e85bc21d4465a2604440f9697e43b1d01f370))
