@@ -1,6 +1,6 @@
 from typing import Any, Dict, Optional
 
-import datadis.concurrent as datadis
+import datadis
 from homeassistant import config_entries
 from homeassistant.const import CONF_NAME, CONF_PASSWORD, CONF_USERNAME
 import homeassistant.helpers.config_validation as cv
@@ -28,7 +28,7 @@ async def validate_auth(username: str, password: str):
     Raises a ValueError if the credentials are invalid
     """
     try:
-        datadis.get_token(username, password)
+        await datadis.get_token(username, password)
     except:
         raise ValueError
 

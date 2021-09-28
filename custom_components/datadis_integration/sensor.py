@@ -3,7 +3,7 @@ import json
 import logging
 from typing import Any, Callable, Dict, Final, Mapping, Optional
 
-import datadis.concurrent as datadis
+import datadis as datadis
 from homeassistant import config_entries, core
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
