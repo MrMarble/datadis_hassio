@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "datadis_integration"
-version = "0.2.3"
+version = "0.3.0"
 description = "Home assistant datadis integration"
 authors = ["Alvaro Tinoco <alvarotinocomarmol@gmail.com>"]
 license = "MIT"

@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2021-09-28)
+### Feature
+* Verbose logging ([`357eba8`](https://github.com/MrMarble/datadis_hassio/commit/357eba8fa2f3c52c754d4363a31b2d2a7c406986))
+
 ## v0.2.3 (2021-09-28)
 ### Fix
 * **datadis:** Wrong import path ([`8e08279`](https://github.com/MrMarble/datadis_hassio/commit/8e08279cfa160696183e024aad47e0c3a97d28ce))
