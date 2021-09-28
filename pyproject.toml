@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "datadis_integration"
+version = "0.2.3"
+description = "Home assistant datadis integration"
+authors = ["Alvaro Tinoco <alvarotinocomarmol@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
