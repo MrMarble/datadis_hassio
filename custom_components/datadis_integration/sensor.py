@@ -1,9 +1,10 @@
-from datetime import timedelta
 import json
 import logging
+from datetime import timedelta
 from typing import Any, Callable, Dict, Final, Mapping, Optional
 
-import datadis as datadis
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 from homeassistant import config_entries, core
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
@@ -12,15 +13,14 @@ from homeassistant.const import (
     CONF_USERNAME,
     DEVICE_CLASS_ENERGY,
 )
-from homeassistant.helpers.aiohttp_client import async_get_clientsession
-import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.typing import (
     ConfigType,
     DiscoveryInfoType,
     HomeAssistantType,
 )
-import voluptuous as vol
+
+import datadis
 
 from .const import DOMAIN
 

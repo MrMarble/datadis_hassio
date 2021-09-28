@@ -1,11 +1,11 @@
 from typing import Any, Dict, Optional
 
-import datadis
-from homeassistant import config_entries
-from homeassistant.const import CONF_NAME, CONF_PASSWORD, CONF_USERNAME
 import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
+from homeassistant import config_entries
+from homeassistant.const import CONF_NAME, CONF_PASSWORD, CONF_USERNAME
 
+import datadis
 from custom_components.datadis_integration.sensor import (
     CONF_CUPS,
     CONF_SUPPLIES,
