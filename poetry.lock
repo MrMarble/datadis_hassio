@@ -266,7 +266,7 @@ test = ["pytest (>=3.6.0,!=3.9.0,!=3.9.1,!=3.9.2)", "pretend", "iso8601", "pytz"
 
 [[package]]
 name = "datadis"
-version = "0.7.3"
+version = "0.8.0"
 description = "Datadis API client"
 category = "main"
 optional = false
@@ -1214,7 +1214,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "c0985e3de4ae1939b5ae53a0a465cc7b52578391ae3c4686975c358e357d606a"
+content-hash = "7813c5788fe30470c027a40b06aa463c1576a6f0288cebcdb60071e92addf221"
 
 [metadata.files]
 aiohttp = [
@@ -1476,8 +1476,8 @@ cryptography = [
     {file = "cryptography-3.3.2.tar.gz", hash = "sha256:5a60d3780149e13b7a6ff7ad6526b38846354d11a15e21068e57073e29e19bed"},
 ]
 datadis = [
-    {file = "datadis-0.7.3-py3-none-any.whl", hash = "sha256:47f889801cfb1b8a9c344b4e853aa5b79099481f51dac9273ee5c640c4206dff"},
-    {file = "datadis-0.7.3.tar.gz", hash = "sha256:8e477dd3d82e6cd030665de2e3cd642e19b715cbdff13fb15b8c3dff85e66ea2"},
+    {file = "datadis-0.8.0-py3-none-any.whl", hash = "sha256:acfe4ca30cc8934a5cc94c7dc19b9c5b4cda296b3dbc6cc1d6db0be16b084c7d"},
+    {file = "datadis-0.8.0.tar.gz", hash = "sha256:2fa626e336df847d13bc17d49b2ee184fe7a617417d44ce385df45743ec8cc39"},
 ]
 distlib = [
     {file = "distlib-0.3.3-py2.py3-none-any.whl", hash = "sha256:c8b54e8454e5bf6237cc84c20e8264c3e991e824ef27e8f1e81049867d861e31"},

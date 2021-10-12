@@ -9,7 +9,7 @@ repository = "https://github.com/mrmarble/datadis_hassio"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-datadis = "^0.7.3"
+datadis = "^0.8.0"
 
 [tool.poetry.dev-dependencies]
 black = "^21.9b0"
@@ -52,7 +52,7 @@ show_missing = true
 [tool.flakehell]
 exclude = ["README.md"]
 format = "colored"
-max_line_length = 88
+max_line_length = 90
 show_source = true
 whitelist = ".flake8.whitelist"
 extended_default_ignore = []
