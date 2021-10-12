@@ -33,4 +33,4 @@ repos:
     rev: 1.7.0
     hooks:
       - id: bandit
-        files: custom_components/*
+        files: custom_components/**/*.py
