@@ -5,18 +5,18 @@ repos:
       - id: black
         language_version: python3
   - repo: https://github.com/life4/flakehell.git
-    rev: v.0.7.1
+    rev: v.0.8.0
     hooks:
       - id: flakehell
         language_version: python3
   - repo: https://github.com/talos-systems/conform
-    rev: master
+    rev: v0.1.0-alpha.23
     hooks:
       - id: conform
         stages:
           - commit-msg
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v4.0.1
     hooks:
       - id: check-json
       - id: check-merge-conflict
