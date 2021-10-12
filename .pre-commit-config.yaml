@@ -4,11 +4,15 @@ repos:
     hooks:
       - id: black
         language_version: python3
-  - repo: https://github.com/life4/flakehell.git
-    rev: v.0.8.0
+  - repo: local
     hooks:
       - id: flakehell
-        language_version: python3
+        name: flakehell
+        language: system
+        types: ["file", "text"]
+        files: \.(ipynb|md|py|rst|yaml|yml)$
+        entry: poetry run flakehell lint
+        require_serial: True
   - repo: https://github.com/talos-systems/conform
     rev: v0.1.0-alpha.23
     hooks:
